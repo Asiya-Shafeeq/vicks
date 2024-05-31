@@ -1,0 +1,682 @@
+*{
+    margin: 0;
+    padding: 0; 
+    list-style: none;
+    text-decoration: none;
+}
+#click{
+    display: none;
+}
+header{
+    background-color: rgb(12, 20, 131);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+header .wrapper{
+    display: flex;
+    margin: 10px 20px 0px 20px;
+    justify-content: space-between;
+}
+header .menu-btn i{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: none;
+}
+header .wrapper div.left{
+
+}
+header .wrapper div.left h1{
+    width: 60px;
+}
+
+div.left h1 a{
+    display: inline-block;
+    cursor: pointer;
+}
+div.left h1 a img{
+    width: 100%;
+    display: block;
+}
+.wrapper nav{
+    display: flex;
+    align-items: center;
+}
+.wrapper nav ul li{
+    margin-right: 60px;
+    display: inline-block;
+}
+.wrapper nav ul li:last-child{
+    margin-right: 0px;
+}
+.wrapper nav ul li a{
+    color: #fff;
+    cursor: pointer; 
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+.wrapper div.right{
+    margin-top: 20px;
+}
+ .wrapper div.right a.icon{
+    color: #fff;
+    cursor: pointer;
+    display: block;
+} 
+#spotlight{
+    height: 100vh; 
+}
+#spotlight div.background{
+}
+#spotlight img{
+    width: 100%;
+    display: block;
+}
+#spotlight div.icon{
+    position: absolute;
+    z-index: 1;
+    bottom: 100px;
+    right: 250px;
+}
+#spotlight div.icon a.button{
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+}
+#spotlight a.button:hover{
+    color: rgb(8, 49, 111);
+}
+#newin{
+    height: 100vh;
+}
+#newin div.newin{
+    margin: 150px 20px 0px 20px;
+}
+#newin div.top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+#newin div.top h1{
+    font-size: 40px;
+    font-weight: normal;
+    color: rgb(8, 49, 111);
+    cursor: pointer;
+}
+#newin div.top a.button{
+    font-size: 18px;
+    cursor: pointer;
+    color: rgb(8, 49, 111);
+    display: inline-block;
+}
+#newin ul{
+    display: flex;
+}
+#newin ul li{
+    margin-right: 40px;
+}
+#newin ul li div.new{
+    width: 330px;
+}
+#newin ul li img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+#newin ul li img:hover{
+    transform: scale(1.1);
+} 
+#newin ul li:last-child{
+    margin-right: 0px;
+}
+#newin ul li span {
+    position: absolute;
+    z-index: 2;
+    top: 890px;
+    left: 60px;
+    cursor: pointer;
+}
+#newin ul li span.one {
+    position: absolute;
+    z-index: 3;
+    left: 430px;
+}
+#newin span h4{
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    color: rgb(8, 49, 111);
+    cursor: pointer;
+}
+#newin span h5{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: rgb(8, 49, 111);
+}
+#newin span a.button{
+    padding: 5px 10px;
+    border: 3px solid rgb(8, 49, 111);
+    font-size: 13px;
+    border-radius: 20px;
+    color: rgb(8, 49, 111);
+    cursor: pointer;
+    display: inline-block;
+}
+#newin span a.button:hover{
+    color: #fff;
+    background-color: rgb(8, 49, 111);;
+} 
+footer{
+    background-color: rgb(8, 49, 111);;
+    height: 105vh;
+
+}
+footer .wrapper{
+    margin-left: 20px;
+}
+footer .wrapper div.top{
+    display: flex;
+    margin-bottom: 100px;
+}
+footer .wrapper div.top div.left{
+    display: flex;
+}
+footer .wrapper div.left div.item{
+    margin-right: 50px;
+    margin-top: 80px;
+}
+footer .wrapper div.left div.item h5{
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+footer .wrapper .top .left .item span.down{
+    display: flex;
+    justify-content: space-between;
+}
+footer .wrapper .top .right .item span.down{
+    display: flex;
+    justify-content: space-between;
+}
+footer .wrapper .top .left a.down{
+    display: none;
+    color: #fff;
+}
+footer .wrapper .top .right a.down{
+    display: none;
+    color: #fff;
+}
+footer .wrapper div.left div.item ul{
+    margin-top: 20px;
+}
+footer .wrapper div.left div.item ul li{
+    margin-bottom: 20px;
+}
+footer .wrapper div.left div.item ul li:last-child{
+    margin-right: 130px;
+}
+footer .wrapper div.left div.item ul li a{
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    display: inline-block;
+}
+footer .wrapper div.top div.right{
+    display: flex;
+    margin-top: 40px;
+}
+footer .wrapper div.top div.right div.item{
+    margin-top: 40px;
+}
+footer .wrapper div.top div.right div.item h5{
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+footer .wrapper div.top div.right div.item ul{
+    margin-top: 20px;
+}
+footer .wrapper div.top div.right div.item ul li{
+    margin-bottom:20px ;
+}
+
+footer .wrapper div.top div.right div.item ul li a{
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+footer .wrapper div.top div.right div.social{
+    margin-top: 40px;
+}
+footer .wrapper div.top div.right div.social ul{
+    display: flex;
+}
+footer .wrapper div.top div.right div.social ul li{
+    margin-right: 30px;
+}
+footer .wrapper div.top div.right div.social ul li a{
+    cursor: pointer;
+    display: inline-block;
+}
+footer .wrapper div.middle{
+    display: flex;
+    justify-content: right;
+}
+footer .wrapper div.middle h5{
+    color: #fff;
+    font-weight: normal;
+    font-size: 18px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+footer .wrapper div.middle img{
+    width: 50px;
+    margin-right: 20px;
+}
+footer .wrapper div.middle img.one{
+    
+}
+footer .wrapper hr.line{
+    margin-top: 10px;
+    width: 98%;
+}
+footer .wrapper div.bottam{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+footer .wrapper div.bottam div.left{
+    display: flex;
+}
+footer .wrapper div.bottam div.left img{
+    width: 30px;
+    height: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+footer .wrapper div.bottam div.left h4{
+    color: #fff;
+    cursor: pointer;
+}
+footer .wrapper div.bottam div.left a.icon{
+    color: #fff;
+    cursor: pointer;
+}
+footer .wrapper div.bottam div.privacy{
+    margin-left: 10px;
+}
+footer .wrapper div.bottam div.privacy ul{
+    display: flex;
+}
+footer .wrapper div.bottam div.privacy ul li{
+    margin-right: 30px;
+}
+footer .wrapper div.bottam div.privacy ul li a{
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+footer .wrapper div.bottam div.right{
+    width: 100px;
+}
+footer .wrapper div.bottam div.right p{
+    color: #fff;
+    font-size: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+ @media screen and (min-width:1440px){
+    #spotlight div.icon{
+       bottom: 50px;
+       right: 250px;
+    }
+    #newin ul li div.new{
+        width: 380px;
+    }
+    #newin ul li span {
+        top: 995px;
+        display: block;
+    }
+    #newin ul li span.one{
+        left:480px ;
+    }
+    footer{
+        height: 120vh;
+    }
+    footer .wrapper div.bottam div.privacy ul li a{
+        font-size: 18px;
+    }
+    footer .wrapper div.bottam div.right p{
+        font-size: 18px;
+    }
+    footer .wrapper div.left div.item{
+    margin-right: 100px;
+    }
+    footer .wrapper div.left div.item h5{
+        font-size: 25px;
+    }
+    footer .wrapper div.top div.right div.item h5{
+        font-size: 25px;
+    }
+    footer .wrapper div.left div.item ul li a{
+    font-size: 20px;
+    }
+    footer .wrapper div.top div.right div.item ul li a{
+    font-size: 20px;
+    }
+} 
+@media screen and (min-width:1280px){
+    #spotlight div.icon{
+        bottom: 45px;
+    }
+    #newin div.newin{
+        margin-top: 200px;
+    }
+    #newin ul li div.new{
+        width: 300px;
+    }
+    #newin ul li span{
+        top: 900px;
+    }
+    #newin ul li span.one{
+        left: 400px;
+    }
+    footer{
+        height: 110vh;
+    }
+}
+@media screen and (max-width:1080px){
+    #spotlight div.icon{
+        bottom:60px;
+        right: 200px;
+    }
+    #newin div.top a.button{
+        font-size: 20px;
+    }
+    #newin ul li div.new{
+        width: 280px;
+    }
+    #newin ul li span{
+        top: 780px;
+    }
+    #newin ul li span{
+        left: 50px;
+    }
+    #newin ul li span.one{
+        left: 370px;
+    }
+    #newin span h4{
+        font-size: 20px;
+    }
+    footer .wrapper div.top div.right{
+        display: block;
+    }
+    footer{
+        height: 143vh;
+    }
+    footer .wrapper div.top div.right div.social{
+        margin-left: -450px;
+        margin-top: 130px;
+    }
+    footer .wrapper div.top div.right div.social ul li{
+        margin-right: 100px;
+    }
+}
+@media screen and (max-width:980px){
+    #spotlight div.icon{
+        bottom: 100px;
+    }
+    #newin div.newin{
+        margin-top: 100px;
+    }
+    #newin ul li span{
+        top: 740px;
+    }
+    footer .wrapper div.bottam div.privacy ul{
+        display: none;
+    }
+    footer .wrapper div.bottam div.right{
+        width: 200px;
+    }
+    footer .wrapper div.bottam div.left{
+        margin-top:15px;
+    }
+    footer{
+        height: 140vh;
+    }
+}
+@media screen and (max-width:768px){
+    #spotlight{
+        height: 90vh;
+    }
+    #spotlight div.icon{
+        bottom: 180px;
+        right: 130px;
+    }
+    #newin div.newin{
+        margin-top: 30px;
+    }
+    #newin div.top a.button{
+        margin-right: 10px;
+    }
+    #newin ul li span{
+        left: 55px;
+        top: 620px;
+    }
+    #newin ul li span.one{
+        left: 375px;
+    }
+    footer{
+        height: 115%;
+    }
+    footer .wrapper div.top div.right{
+        margin-left: -90px;
+        margin-right: 15px;
+    }
+}
+@media screen and (max-width:640px){
+    header{
+        display: flex;
+        flex-direction: row;
+    }
+    header .wrapper div.left{
+        margin-left: 253px;
+    }
+    #spotlight div.background{
+        width: 112%;
+    }
+    #spotlight{
+        height: 77vh;
+    }
+    #spotlight div.icon{
+        bottom: 200px;
+        right: 70px;
+    }
+    #spotlight div.icon a.button{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    #newin{
+        width: 112%;
+    }
+    #newin div.top a.button{
+        margin-right: 30px;
+    }
+    header .menu-btn i{
+        display: block;
+        margin: 30px 0px 0px 15px;
+    }
+    .wrapper div.right{
+        margin-left: 280px;
+    }
+    .wrapper nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    .wrapper nav ul li{
+        display: block;
+         margin: 40px 0px 0px 30px;
+         line-height: 30px;
+    } 
+    .wrapper nav ul li a{
+        display: block;
+        color: #000;
+        font-size: 20px;
+    }
+    #newin span h4{
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    #newin span h5{
+        font-size: 15px;
+    }
+    #newin ul li span.one{
+        left: 395px;
+    }
+    footer{
+        height: 80vh;
+        width: 112%;
+    }
+    
+    footer .wrapper div.left div.item ul{
+        display: none;
+    }
+    footer .wrapper div.top div.right div.item ul{
+        display: none;
+    }
+    footer .wrapper div.top div.right div.social ul li{
+        margin-right: 30px;
+    }
+    footer .wrapper div.top div.right div.social{
+        margin: 0px;
+    }
+    footer .wrapper div.top{
+        padding-top: 20px;
+        margin-bottom: 50px;
+    }
+    footer .wrapper div.top div.right{
+        margin: 0px;
+    }
+    footer .wrapper div.top{
+        display: block;
+    }
+    footer .wrapper div.top div.left{
+        display: block;
+        margin-right: 50px;
+    }
+    footer .wrapper div.top div.right{
+        margin-right: 50px;
+    }
+    footer .wrapper div.left div.item{
+        margin: 20px 0px 0px 0px;
+    }
+    footer .wrapper div.top div.right div.item{
+        margin-top: 20px;
+    }
+    footer .wrapper div.top div.right div.social ul{
+        margin-top: 40px;
+    }
+    footer .wrapper div.bottam{
+        margin-top: 0px;
+    }
+    footer .wrapper .top .right a.down{
+        display: block;
+    }
+    footer .wrapper .top .left a.down{
+        display: block;
+    }
+}
+@media screen and (max-width:540px){
+    header .wrapper div.left{
+        margin-left: 90px;
+    }
+    .wrapper nav ul{
+        display: none;
+    }
+    header .wrapper{
+        justify-content: space-between;
+        margin: 10px 20px 10px 20px;
+    }
+    div.left h1 img{
+        width: 60%;
+    }
+    .wrapper div.right{
+        margin-top: 10px;
+    }
+    #spotlight div.icon{
+        bottom: 200px;
+        left: 250px;
+    }
+    #newin ul li span{
+        top: 570px;
+    }
+    #newin ul li span.one{
+        left: 350px;
+    }
+    #newin ul li{
+        margin-right: 20px;
+    }
+    footer .wrapper{
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width:480px){
+    header .wrapper div.left{
+        margin-left: 80px;
+    }
+    header .wrapper div.left h1{
+        width: 50px;
+    }
+    #spotlight{
+        margin-top: 50px;
+    }
+    #spotlight div.background{
+        width: 125%;
+    }
+    #spotlight div.icon{
+        bottom: 160px;
+        left: 280px;
+    }
+    #newin ul li div.new{
+        width: 200px;
+    }
+    #newin ul li span{
+        top: 610px;
+    }
+    #newin ul li span.one{
+        left: 270px;
+    }
+    #newin span h4{
+        font-size: 13px;
+    }
+    #newin span h5{
+        margin-bottom: 3px;
+    }
+    #newin span a.button{
+        padding: 3px 8px;
+        font-size: 8px;
+    }
+    footer{
+        width: 125%;
+    }
+}
