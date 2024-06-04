@@ -14,18 +14,31 @@ header{
     width: 100%;
     z-index: 4;
 }
+header.scrolled{
+    background-color: #fff;
+    opacity: 0.98;
+}
 header .wrapper{
     display: flex;
     margin: 10px 20px 0px 20px;
     justify-content: space-between;
 }
-header .menu-btn i{
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-    display: none;
+header.scrolled .checkbtn{
+    color: #000;
 }
+  .checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+  }
+  #check{
+    display: none;
+  }
 header .wrapper div.left{
 
 }
@@ -41,27 +54,29 @@ div.left h1 a img{
     width: 100%;
     display: block;
 }
-.wrapper nav{
+ul.nav{
     display: flex;
-    align-items: center;
+    margin-top: 15px;
 }
-.wrapper nav ul li{
-    margin-right: 60px;
-    display: inline-block;
+.wrapper nav ul.nav li{
+    margin-right: 70px;
 }
-.wrapper nav ul li:last-child{
-    margin-right: 0px;
+.wrapper nav ul.nav li:last-child{
+    margin-right: 0;
 }
-.wrapper nav ul li a{
+.wrapper nav ul.nav li a{
+    font-size: 18px;
     color: #fff;
-    cursor: pointer; 
+    cursor: pointer;
+    font-weight: bold;
 }
-nav ul li a{
-    text-decoration: none;
+header.scrolled .wrapper nav ul.nav li a{
     color: #000;
-    transition: color 0.3s ease;
 }
-.wrapper div.right{
+.wrapper nav ul.nav li a.icon{
+    display: none;
+}
+header .wrapper div.right{
     margin-top: 20px;
 }
  .wrapper div.right a.icon{
@@ -69,10 +84,14 @@ nav ul li a{
     cursor: pointer;
     display: block;
 } 
+header.scrolled .wrapper div.right a.icon{
+    color: #000;
+}
 #spotlight{
     height: 100vh; 
 }
 #spotlight div.background{
+    width: 100%;
 }
 #spotlight img{
     width: 100%;
@@ -94,15 +113,15 @@ nav ul li a{
     color: rgb(8, 49, 111);
 }
 #newin{
-    height: 100vh;
+    height: 110vh;
 }
 #newin div.newin{
-    margin: 150px 20px 0px 20px;
+    margin: 180px 20px 0px 20px;
 }
 #newin div.top{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 #newin div.top h1{
     font-size: 40px;
@@ -139,7 +158,7 @@ nav ul li a{
 #newin ul li span {
     position: absolute;
     z-index: 2;
-    top: 890px;
+    top: 955px;
     left: 60px;
     cursor: pointer;
 }
@@ -202,10 +221,6 @@ footer .wrapper .top .left .item span.down{
     display: flex;
     justify-content: space-between;
 }
-footer .wrapper .top .right .item span.down{
-    display: flex;
-    justify-content: space-between;
-}
 footer .wrapper .top .left a.down{
     display: none;
     color: #fff;
@@ -229,40 +244,43 @@ footer .wrapper div.left div.item ul li a{
     font-size: 15px;
     display: inline-block;
 }
-footer .wrapper div.top div.right{
+footer .wrapper div.top div.one{
     display: flex;
     margin-top: 40px;
 }
-footer .wrapper div.top div.right div.item{
+footer .wrapper div.top .one .item span.down a.icon{
+    display: none;
+}
+footer .wrapper div.top div.one div.item{
     margin-top: 40px;
 }
-footer .wrapper div.top div.right div.item h5{
+footer .wrapper div.top div.one div.item h5{
     font-size: 18px;
     color: #fff;
     cursor: pointer;
 }
-footer .wrapper div.top div.right div.item ul{
+footer .wrapper div.top div.one div.item ul{
     margin-top: 20px;
 }
-footer .wrapper div.top div.right div.item ul li{
+footer .wrapper div.top div.one div.item ul li{
     margin-bottom:20px ;
 }
 
-footer .wrapper div.top div.right div.item ul li a{
+footer .wrapper div.top div.one div.item ul li a{
     font-size: 15px;
     color: #fff;
     cursor: pointer;
 }
-footer .wrapper div.top div.right div.social{
+footer .wrapper div.top div.one div.social{
     margin-top: 40px;
 }
-footer .wrapper div.top div.right div.social ul{
+footer .wrapper div.top div.one div.social ul{
     display: flex;
 }
-footer .wrapper div.top div.right div.social ul li{
+footer .wrapper div.top div.one div.social ul li{
     margin-right: 30px;
 }
-footer .wrapper div.top div.right div.social ul li a{
+footer .wrapper div.top div.one div.social ul li a{
     cursor: pointer;
     display: inline-block;
 }
@@ -277,12 +295,16 @@ footer .wrapper div.middle h5{
     margin-right: 20px;
     cursor: pointer;
 }
-footer .wrapper div.middle img{
+footer .wrapper div.middle a{
     width: 50px;
     margin-right: 20px;
 }
-footer .wrapper div.middle img.one{
-    
+footer .wrapper div.middle a.img{
+    width: 70px;
+}
+footer .wrapper div.middle img{
+    width: 100%;
+    display: block;
 }
 footer .wrapper hr.line{
     margin-top: 10px;
@@ -291,15 +313,18 @@ footer .wrapper hr.line{
 footer .wrapper div.bottam{
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 footer .wrapper div.bottam div.left{
     display: flex;
 }
-footer .wrapper div.bottam div.left img{
+footer .wrapper div.bottam div.left a {
     width: 30px;
-    height: 20px;
     margin-right: 8px;
+}
+footer .wrapper div.bottam div.left a img{
+    width: 100%;
+    display: block;
     cursor: pointer;
 }
 footer .wrapper div.bottam div.left h4{
@@ -334,23 +359,29 @@ footer .wrapper div.bottam div.right p{
     margin-right: 15px;
     cursor: pointer;
 }
- @media screen and (min-width:1440px){
+  @media screen and (min-width:1440px){
     #spotlight div.icon{
        bottom: 50px;
-       right: 250px;
+       right: 300px;
+    }
+    #newin{
+        height: 120vh;
+    }
+    #newin div.newin{
+        margin-top: 250px;
     }
     #newin ul li div.new{
-        width: 380px;
+        width: 400px;
     }
     #newin ul li span {
-        top: 995px;
+        top: 1065px;
         display: block;
     }
     #newin ul li span.one{
-        left:480px ;
+        left:500px ;
     }
     footer{
-        height: 120vh;
+        height: 110vh;
     }
     footer .wrapper div.bottam div.privacy ul li a{
         font-size: 18px;
@@ -374,7 +405,7 @@ footer .wrapper div.bottam div.right p{
     font-size: 20px;
     }
 } 
-@media screen and (min-width:1280px){
+ @media screen and (min-width:1280px){
     #spotlight div.icon{
         bottom: 45px;
     }
@@ -385,7 +416,7 @@ footer .wrapper div.bottam div.right p{
         width: 300px;
     }
     #newin ul li span{
-        top: 900px;
+        top: 935px;
     }
     #newin ul li span.one{
         left: 400px;
@@ -393,11 +424,14 @@ footer .wrapper div.bottam div.right p{
     footer{
         height: 110vh;
     }
-}
+} 
 @media screen and (max-width:1080px){
     #spotlight div.icon{
         bottom:60px;
         right: 200px;
+    }
+    #newin div.newin{
+        margin-top: 130px;
     }
     #newin div.top a.button{
         font-size: 20px;
@@ -406,9 +440,7 @@ footer .wrapper div.bottam div.right p{
         width: 280px;
     }
     #newin ul li span{
-        top: 780px;
-    }
-    #newin ul li span{
+        top: 800px;
         left: 50px;
     }
     #newin ul li span.one{
@@ -417,17 +449,17 @@ footer .wrapper div.bottam div.right p{
     #newin span h4{
         font-size: 20px;
     }
-    footer .wrapper div.top div.right{
+    footer .wrapper div.top div.one{
         display: block;
     }
     footer{
-        height: 143vh;
+        height: 150vh;
     }
-    footer .wrapper div.top div.right div.social{
+    footer .wrapper div.top div.one div.social{
         margin-left: -450px;
         margin-top: 130px;
     }
-    footer .wrapper div.top div.right div.social ul li{
+    footer .wrapper div.top div.one div.social ul li{
         margin-right: 100px;
     }
 }
@@ -439,7 +471,7 @@ footer .wrapper div.bottam div.right p{
         margin-top: 100px;
     }
     #newin ul li span{
-        top: 740px;
+        top: 780px;
     }
     footer .wrapper div.bottam div.privacy ul{
         display: none;
@@ -455,6 +487,9 @@ footer .wrapper div.bottam div.right p{
     }
 }
 @media screen and (max-width:768px){
+    .wrapper nav ul.nav li a {
+        font-size: 15px;
+    }
     #spotlight{
         height: 90vh;
     }
@@ -470,15 +505,15 @@ footer .wrapper div.bottam div.right p{
     }
     #newin ul li span{
         left: 55px;
-        top: 620px;
+        top: 650px;
     }
     #newin ul li span.one{
         left: 375px;
     }
     footer{
-        height: 115%;
+        height: 145vh;
     }
-    footer .wrapper div.top div.right{
+    footer .wrapper div.top div.one{
         margin-left: -90px;
         margin-right: 15px;
     }
@@ -487,61 +522,70 @@ footer .wrapper div.bottam div.right p{
     header{
         display: flex;
         flex-direction: row;
+        width: 100%;
     }
-    header .wrapper div.left{
-        margin-left: 253px;
-    }
-    #spotlight div.background{
-        width: 112%;
+     .checkbtn{
+        display: block;
+        margin-left: 290px;
+        line-height: 50px;
+      }
+      ul.nav{  
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 60px;
+        left: -100%;
+        transition: all .5s;
+        background-color: #fff;
+      }
+      .wrapper nav ul.nav li{
+        display: flex;
+        justify-content: space-between;
+        line-height: 65px;
+        margin-right: 0;
+      }
+      .wrapper nav ul.nav li:first-child{
+        margin-top: 40px;
+      }
+      .wrapper nav ul.nav li a{
+        font-size: 20px;
+        margin-left: 30px;
+        color: #000;
+      }
+      .wrapper nav ul.nav li a.icon{
+        display: block;
+        margin-right: 30px;
+        margin-left: 0;
+      } 
+      #check:checked ~ ul{
+        left: 0;
+        display: block;
+      }  
+     #spotlight div.background{
+        width: 118%; 
     }
     #spotlight{
-        height: 77vh;
+        height: 75vh;
     }
     #spotlight div.icon{
         bottom: 200px;
-        right: 70px;
+        right: 60px;
     }
     #spotlight div.icon a.button{
-        padding: 5px 10px;
-        font-size: 13px;
+        padding: 5px 15px;
     }
     #newin{
-        width: 112%;
+        width: 118%;
+        height: 120vh;
     }
-    #newin div.top a.button{
-        margin-right: 30px;
+    #newin div.newin {
+        margin-top: 100px;
     }
-    header .menu-btn i{
-        display: block;
-        margin: 30px 0px 0px 15px;
+    header .wrapper div.right{
+        padding-left: 630px; 
     }
-    .wrapper div.right{
-        margin-left: 280px;
-    }
-    .wrapper nav ul{
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        background-color: #fff;
-        height: 100vh;
-        width: 100%;
-        transition: all 0.3s ease;
-    }
-    #click:checked ~ .menu-btn i:before{
-        content: "\f00d";
-    }
-    #click:checked ~ ul{
-        left: 0;
-    }
-    .wrapper nav ul li{
-        display: block;
-         margin: 40px 0px 0px 30px;
-         line-height: 30px;
-    } 
-    .wrapper nav ul li a{
-        display: block;
-        color: #000;
-        font-size: 20px;
+    #newin ul li div.new{
+        width: 250px;
     }
     #newin span h4{
         font-size: 15px;
@@ -550,32 +594,42 @@ footer .wrapper div.bottam div.right p{
     #newin span h5{
         font-size: 15px;
     }
+    #newin ul li span{
+        top: 640px;
+    }
     #newin ul li span.one{
-        left: 395px;
+        left: 345px;
     }
     footer{
-        height: 80vh;
-        width: 112%;
+        height: 100vh;
+        width: 118%;
     }
     
     footer .wrapper div.left div.item ul{
         display: none;
     }
-    footer .wrapper div.top div.right div.item ul{
+    footer .wrapper div.top .one .item span.down{
+        display: flex;
+        justify-content: space-between;
+    }
+ 
+    footer .wrapper div.top .one .item span.down a.icon{
+        display: block;
+        color: #fff;
+    }
+
+    footer .wrapper div.top div.one div.item ul{
         display: none;
     }
-    footer .wrapper div.top div.right div.social ul li{
+    footer .wrapper div.top div.one div.social ul li{
         margin-right: 30px;
     }
-    footer .wrapper div.top div.right div.social{
+    footer .wrapper div.top div.one div.social{
         margin: 0px;
     }
     footer .wrapper div.top{
         padding-top: 20px;
         margin-bottom: 50px;
-    }
-    footer .wrapper div.top div.right{
-        margin: 0px;
     }
     footer .wrapper div.top{
         display: block;
@@ -584,20 +638,24 @@ footer .wrapper div.bottam div.right p{
         display: block;
         margin-right: 50px;
     }
-    footer .wrapper div.top div.right{
+    footer .wrapper div.top div.one{
         margin-right: 50px;
+        margin-left: 0;
     }
     footer .wrapper div.left div.item{
-        margin: 20px 0px 0px 0px;
+        margin: 40px 0px 0px 0px;
     }
-    footer .wrapper div.top div.right div.item{
+    footer .wrapper div.top div.one div.item{
         margin-top: 20px;
     }
-    footer .wrapper div.top div.right div.social ul{
+    footer .wrapper div.top div.one div.social ul{
         margin-top: 40px;
     }
     footer .wrapper div.bottam{
-        margin-top: 0px;
+        margin-top: 10px;
+    }
+    footer .wrapper div.bottam div.right{
+        margin-top: 20px;
     }
     footer .wrapper .top .right a.down{
         display: block;
@@ -607,8 +665,11 @@ footer .wrapper div.bottam div.right p{
     }
 }
 @media screen and (max-width:540px){
-    header .wrapper div.left{
-        margin-left: 90px;
+    header .wrapper div.right{
+        padding-left: 495px;
+    }
+    .checkbtn {
+        margin-left: 200px;
     }
     .wrapper nav ul{
         display: none;
@@ -617,11 +678,8 @@ footer .wrapper div.bottam div.right p{
         justify-content: space-between;
         margin: 10px 20px 10px 20px;
     }
-    div.left h1 img{
-        width: 60%;
-    }
-    .wrapper div.right{
-        margin-top: 10px;
+    header .wrapper div.left h1{
+        width: 50px;
     }
     #spotlight div.icon{
         bottom: 200px;
@@ -636,16 +694,13 @@ footer .wrapper div.bottam div.right p{
     #newin ul li{
         margin-right: 20px;
     }
-    footer .wrapper{
-        margin-left: 50px;
+    footer .wrapper div.top{
+        margin-left: 25px;
     }
 }
 @media screen and (max-width:480px){
-    header .wrapper div.left{
-        margin-left: 80px;
-    }
-    header .wrapper div.left h1{
-        width: 50px;
+    header .wrapper div.right{
+        padding-left: 475px;
     }
     #spotlight{
         margin-top: 50px;
@@ -679,4 +734,4 @@ footer .wrapper div.bottam div.right p{
     footer{
         width: 125%;
     }
-}
+}   

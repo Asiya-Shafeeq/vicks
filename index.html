@@ -10,10 +10,6 @@
 </head>
 <body>
     <header>
-        <input type="checkbox" id="click">
-            <label for="click" class="menu-btn">
-                <i class="fa fa-bars"></i>
-            </label>
         <section class="wrapper">
             <div class="left">
                 <h1>
@@ -23,11 +19,27 @@
                 </h1>
             </div>
             <nav>
-                <ul>
-                    <li><a href="#">PRODUCTS</a></li>
-                    <li><a href="#">TREATMENT & TIPS</a></li>
-                    <li><a href="#">FAQS</a></li>
-                    <li><a href="#">OUR STORY</a></li>
+                <input type="checkbox" id="check"/>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav">
+                    <li>
+                        <a href="#">PRODUCTS</a>
+                        <a href="#" class="icon icon-down-open"></a>
+                    </li>
+                    <li>
+                        <a href="#">TREATMENT & TIPS</a>
+                        <a href="#" class="icon icon-down-open"></a>
+                    </li>
+                    <li>
+                        <a href="#">FAQS</a>
+                        <a href="#" class="icon icon-down-open"></a>
+                    </li>
+                    <li>
+                        <a href="#">OUR STORY</a>
+                        <a href="#" class="icon icon-down-open"></a>
+                    </li>
                 </ul>
             </nav>
             <div class="right">
@@ -119,11 +131,11 @@
                     </ul>
                 </div>
             </div>
-                <div class="right">
+                <div class="one">
                     <div class="item">
                         <span class="down">
                             <h5>OUR STORY</h5>
-                            <a href="#" class="down icon-down-open"></a>
+                            <a href="#" class="icon icon-down-open"></a>
                         </span>
                         <ul>
                             <li><a href="">Our Stroy</a></li>
@@ -145,14 +157,16 @@
             </div>
                 <div class="middle">
                     <h5>Your Privacy Choices</h5>
-                    <img class="one" src="./image/privacyoptions730x350.png" alt="">
-                    <img src="image/aaa.svg" alt="">
-                    <img src="image/pic.svg" alt="">
+                    <a href="#"><img class="one" src="./image/privacyoptions730x350.png" alt=""></a>
+                    <a href="#"><img src="image/aaa.svg" alt=""></a>
+                    <a class="img" href="#"><img src="image/pic.svg" alt=""></a>
                 </div>
                 <hr class="line"/>
                 <div class="bottam">
                     <div class="left">
-                        <img src="image/flagImage.png" alt="flag">
+                        <a href="#">
+                            <img src="image/flagImage.png" alt="flag">
+                        </a>
                         <h4>United States</h4>
                         <a href="#" class="icon icon-down-open">
                         </a>
@@ -176,14 +190,13 @@
     </footer>
 </body>
 <script>
-    doument.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header')
 
-        if(window.scrollY > 0){
+        if (window.scrollY > 0) {
             header.classList.add('scrolled');
-        }
-        else {
-            header.classList.remove('scrolled')
+        } else {
+            header.classList.remove('scrolled');
         }
     })
 </script>
